@@ -1,0 +1,263 @@
+///////////////////////////////////////   USER NAVIGATION
+.user-nav {
+    display: flex;
+    align-items: center;
+
+    &__links{
+        padding-right:2 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        text-decoration: underline;
+        font-style: italic;
+
+        & a{
+            color: var(--color-primary);
+        }
+    }
+
+    &__links li{
+        margin-left: 2rem;
+    }
+
+}
+
+
+
+
+////////////////////////     MAIN CONTENT
+.main{
+    background-image: url(../img/sky.jpg),;
+    background-repeat: no-repeat;
+    height: auto;
+}
+.main-picture{
+    &__img{
+        margin-top: 10rem;
+        max-width: 100%;
+        height: 100vh;
+        position: relative;
+        font-weight: initial;
+    }
+
+    &>h1{
+        margin-left: 28%;
+        position: absolute;
+        font-size: 10rem;
+        text-transform: capitalize;
+        @media only screen and (max-width: $screen-smallest) {
+            margin-left: 15%;
+        }
+    }
+    
+    &__la{
+        color: var(--color-grey-dark-1); 
+        margin-top:13%; 
+        @media only screen and (max-width: $screen-smallest) {
+            margin-top: 18%;
+        }
+        animation: moveInLeft .5s ease-in;
+    }
+
+    &__mn{
+        margin-top: 20%;
+        color: transparent;
+        background-image: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark));
+        -webkit-background-clip: text;
+        background-clip: text;
+        @media only screen and (max-width: $screen-smallest) {
+            margin-top: 33%;
+        }
+        animation: moveInRight .5s ease-in;
+    }
+}
+
+////////////////////////// FOOTER
+
+.footer-nav {
+    &__links{
+        cursor: pointer;
+        height: 100%;
+        align-items: center;
+        list-style-type: none;
+        text-decoration: underline;
+        font-style: italic;
+
+
+        & li a{
+            color: var(--color-primary-dark);
+            margin: 0 2rem;
+            text-align: center;
+            position: absolute;
+            margin-top: -4rem;
+    }
+    }
+
+    &__link__history{
+        margin-right: 20rem;
+        @media only screen and (max-width: $screen-smallest) {
+            margin-right: 17rem;
+        }
+    }
+
+    &__link__team{
+        margin-right: 10rem;
+        @media only screen and (max-width: $screen-smallest) {
+            margin-right: 8rem;
+        }
+    }
+}
+
+
+.history{
+    background-image: url(../img/history.jpeg),;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &__p{
+        font-size: 1.6rem;
+        animation: moveInBottom .5s ease-in;
+    }
+
+    &__carousel{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding:2rem;
+        flex-wrap:wrap;
+        background-color: var(--color-primary-dark-transparent-2);
+        margin-top: 36vh;
+        @media only screen and (max-width: $screen-smallest) {
+            margin-top: 21.5vh;
+        }
+  
+
+        & img{
+            margin: .5rem;
+            height: 10rem;
+            animation: FadeInOut 1s ease-out;
+        
+        }
+
+        &__dots{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 3%;
+            text-align: center;
+            align-items: center;
+            position: absolute;
+            font-size: 5rem;
+            cursor: pointer;
+            color: var(--color-primary);
+            @media only screen and (max-width: $screen-smallest) {
+                margin-top: 22%;
+            }
+        }
+    }
+}
+
+.text{
+    &__h1{
+        font-size: 12rem;
+        color: var(--color-primary-dark-transparent);
+        position: relative;
+        animation: moveInBottom .3s ease-in;
+    }
+
+    &__h2{
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: var(--color-primary-light);
+        position: absolute;
+        margin-top: -10rem;
+        margin-left: 12rem;
+        animation: moveInBottom .4s ease-in;
+    }
+
+    &__p{
+        font-size: 1.6rem;
+        position: absolute;
+        margin-top: -12rem;
+        margin-left: 23rem;
+        max-width: 50rem;
+        @media only screen and (max-width: $screen-smallest) {
+            margin-left: 20rem;
+        }
+        animation: moveInBottom .5s ease-in;
+    }
+}
+
+// ///////////////////////////////////////   TEAM
+.team{
+    background-image: url(../img/climb.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &__heading{
+        background-color: var(--color-primary);
+    }
+
+    .trigger{
+        display: inline-block;
+        padding: .5rem;
+        text-decoration: underline;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        &:not(.active){
+            color: var(--color-grey-dark);
+        }
+
+        &.active{
+            background-color: var(--color-grey-dark);
+            color: var(--color-primary-dark);
+        }
+    }
+
+    &__nav{
+        background-color: var(--color-primary-dark);
+    }
+
+    &__content{
+        max-width: 30rem;
+        font-size: 1.6rem;
+        background-color: var(--color-primary-transparent);
+        margin-top: 7rem;
+        padding: 2rem;
+        border-radius: .5rem;
+        display: none;
+        animation: moveInLeft .5s ease-in;
+
+        &.active{
+            display: block;
+        }
+
+        & h1{
+            text-transform: uppercase;
+            color: var(--color-primary-dark);
+        }
+    }
+
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    
+        &__item {
+            flex: 0 0 50%;
+            color:var(--color-grey-dark)
+        }
+    }
+}
+

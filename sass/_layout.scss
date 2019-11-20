@@ -1,0 +1,99 @@
+.header {
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 7rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -.50rem;
+    z-index: 100;
+    
+    &__logo{
+            height: 4.25rem;
+            margin-left: 2rem;
+    }
+}
+
+.footer{
+    height: 7rem;
+    margin-top: -.50rem;
+    background-color: var(--color-primary);
+    position: relative;
+      
+      &__logo{
+          float:left;
+          height: 4.25rem;
+        }
+
+        .text{
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            padding-top: 1rem;
+            vertical-align:top;
+        }
+      
+      ul li{
+        float: right;
+        font-size: 1.4rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+}
+
+.container{
+    max-width: 80rem;
+    margin: 0 auto;
+    clear:both;
+    overflow:hidden;
+    @media only screen and (max-width: $screen-smallest) {
+        max-width: 80%;
+    }
+}
+
+.wrapper{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+
+.team-footer{
+    height: 7rem;
+    background-color: var(--color-primary);
+    position: relative;
+    margin-top: 24.1vh;
+    background-color: var(--color-primary-dark);
+    @media only screen and (max-width: $screen-smallest) {
+        margin-top: 60%;
+    }
+      
+      &__logo{
+          float:left;
+          height: 4.25rem;
+        }
+
+        .text{
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            padding-top: 1rem;
+            vertical-align:top;
+        }
+
+        .text, &__rights{
+            color: transparent;
+            background-color: var(--color-primary-light);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+      
+        &__rights{
+            position: absolute;
+            margin-top: -3rem;
+            text-transform: uppercase;
+            float: left;
+            margin-left: 40%;
+            font-size: 1.2rem;
+            @media only screen and (max-width: $screen-smallest) {
+                margin-left: 40%;
+            }
+        }
+}
